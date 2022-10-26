@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GithuApiConsumer", "GithuApiConsumer\GithuApiConsumer.csproj", "{7BC08D2B-0223-4F3A-A836-8E006B0F7630}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GithubApiConsumer", "GithuApiConsumer\GithubApiConsumer.csproj", "{7BC08D2B-0223-4F3A-A836-8E006B0F7630}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
