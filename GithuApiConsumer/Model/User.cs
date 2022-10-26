@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GithuApiConsumer.Model
 {
-    internal class User
+    class User
     {
+        public string Login { get; set; }
     }
 }

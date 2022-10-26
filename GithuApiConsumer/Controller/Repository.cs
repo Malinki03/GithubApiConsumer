@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.IO;
 using System.Net;
+using GithuApiConsumer.Model;
 
 namespace GithuApiConsumer.Controller
 {
@@ -15,6 +16,11 @@ namespace GithuApiConsumer.Controller
 
         public Repository()
         {
+        }
+
+        public List<Repo> GetUserRepos(string nickname)
+        {
+            return ((List<Repo>)MakeRequest(string.Concat(url, "users/", nickname, "/repos"), null, "GET", "application/json", typeof(List<Repo>)));
         }
 
         public static object MakeRequest(String Url, object Body, string HttpMethod, string ContentType, Type ResponseType)

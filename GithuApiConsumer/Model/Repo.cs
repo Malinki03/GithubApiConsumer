@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace GithuApiConsumer.Model
 {
-    internal class Repo
+    public class Repo
     {
+        public string name { get; set; }
+        public string url { get; set; }
     }
 }
