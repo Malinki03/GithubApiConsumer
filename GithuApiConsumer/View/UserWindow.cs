@@ -16,5 +16,10 @@ namespace GithuApiConsumer
         {
             InitializeComponent();
         }
+
+        private void repositorisL_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
