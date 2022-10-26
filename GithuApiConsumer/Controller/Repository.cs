@@ -18,11 +18,32 @@ namespace GithuApiConsumer.Controller
         {
         }
 
+
+        #region Querys a la api
         public List<Repo> GetUserRepos(string nickname)
         {
             List<Repo> lr = (List<Repo>)MakeRequest(String.Concat(url, "users/", nickname, "/repos"), null, "GET", "application/json", typeof(List<Repo>));
             return lr;
         }
+
+        public List<User> GerUser(string nickname)
+        {
+            List<User> lu = (List<User>)MakeRequest(String.Concat(url, "users/", nickname), null, "GET", "application/json", typeof(List<User>));
+            return lu;
+        }
+
+        public List<User> GetUserFollowed(string nickname)
+        {
+            List<User> lu = (List<User>)MakeRequest(String.Concat(url, "users/", nickname, "/following"), null, "GET", "application/json", typeof(List<User>));
+            return lu;
+        }
+
+        public List<User> GetUserFollowers(string nickname)
+        {
+            List<User> lu = (List<User>)MakeRequest(String.Concat(url, "users/", nickname, "/followers"), null, "GET", "application/json", typeof(List<User>));
+            return lu;
+        }
+        #endregion
 
         public static object MakeRequest(String Url, object Body, string HttpMethod, string ContentType, Type ResponseType)
         {
