@@ -52,6 +52,8 @@
     <Compile Include="Controller\RepositoriesWindowController.cs" />
     <Compile Include="Controller\Repository.cs" />
     <Compile Include="Controller\UserWindowController.cs" />
+    <Compile Include="Model\Repo.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="View\UserWindow.cs">
       <SubType>Form</SubType>
     </Compile>
