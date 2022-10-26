@@ -7,13 +7,13 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Net;
 
-namespace ChinookApiConsumer.Controller
+namespace GithuApiConsumer.Controller
 {
-    internal class Repo
+    internal class Repository
     {
         private String url = "https://api.github.com/";
 
-        public Repo()
+        public Repository()
         {
         }
 
