@@ -18,8 +18,25 @@ namespace GithuApiConsumer.Controller
         {
             this.uwindow = new UserWindow();
             this.repo = new Repository();
-            this.uwindow.reposDGV.DataSource = this.repo.GetUserRepos("Malinki03");
+            InitListeners();
             Application.Run(this.uwindow);
+        }
+
+        public void LoadData()
+        {
+            uwindow.reposDGV.DataSource = this.repo.GetUserRepos(uwindow.userTB.Text);
+            uwindow.seguitsDGV.DataSource = this.repo.GetUserFollowed(uwindow.userTB.Text);
+            uwindow.seguidorsDGV.DataSource = this.repo.GetUserFollowers(uwindow.userTB.Text);
+        }
+
+        public void InitListeners()
+        {
+            uwindow.userTB.TextChanged += UserTB_TextChanged;
+        }
+
+        private void UserTB_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
