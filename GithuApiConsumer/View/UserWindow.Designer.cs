@@ -32,20 +32,19 @@
             this.userL = new System.Windows.Forms.Label();
             this.reposDGV = new System.Windows.Forms.DataGridView();
             this.repositorisL = new System.Windows.Forms.Label();
-            this.fotoPB = new System.Windows.Forms.PictureBox();
             this.seguidorsDGV = new System.Windows.Forms.DataGridView();
             this.seguitsDGV = new System.Windows.Forms.DataGridView();
             this.seguidorsL = new System.Windows.Forms.Label();
             this.seguitsL = new System.Windows.Forms.Label();
+            this.submButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.reposDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguidorsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguitsDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // userTB
             // 
-            this.userTB.Location = new System.Drawing.Point(41, 19);
+            this.userTB.Location = new System.Drawing.Point(58, 38);
             this.userTB.Name = "userTB";
             this.userTB.Size = new System.Drawing.Size(218, 20);
             this.userTB.TabIndex = 0;
@@ -53,7 +52,7 @@
             // userL
             // 
             this.userL.AutoSize = true;
-            this.userL.Location = new System.Drawing.Point(3, 22);
+            this.userL.Location = new System.Drawing.Point(20, 41);
             this.userL.Name = "userL";
             this.userL.Size = new System.Drawing.Size(32, 13);
             this.userL.TabIndex = 1;
@@ -61,9 +60,10 @@
             // 
             // reposDGV
             // 
-            this.reposDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.reposDGV.Location = new System.Drawing.Point(311, 38);
             this.reposDGV.Name = "reposDGV";
+            this.reposDGV.ReadOnly = true;
+            this.reposDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.reposDGV.Size = new System.Drawing.Size(218, 400);
             this.reposDGV.TabIndex = 2;
             // 
@@ -77,27 +77,21 @@
             this.repositorisL.Text = "Repositoris";
             this.repositorisL.Click += new System.EventHandler(this.repositorisL_Click);
             // 
-            // fotoPB
-            // 
-            this.fotoPB.Location = new System.Drawing.Point(77, 72);
-            this.fotoPB.Name = "fotoPB";
-            this.fotoPB.Size = new System.Drawing.Size(120, 120);
-            this.fotoPB.TabIndex = 4;
-            this.fotoPB.TabStop = false;
-            // 
             // seguidorsDGV
             // 
-            this.seguidorsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.seguidorsDGV.Location = new System.Drawing.Point(570, 38);
             this.seguidorsDGV.Name = "seguidorsDGV";
+            this.seguidorsDGV.ReadOnly = true;
+            this.seguidorsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.seguidorsDGV.Size = new System.Drawing.Size(218, 185);
             this.seguidorsDGV.TabIndex = 5;
             // 
             // seguitsDGV
             // 
-            this.seguitsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.seguitsDGV.Location = new System.Drawing.Point(570, 255);
             this.seguitsDGV.Name = "seguitsDGV";
+            this.seguitsDGV.ReadOnly = true;
+            this.seguitsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.seguitsDGV.Size = new System.Drawing.Size(218, 183);
             this.seguitsDGV.TabIndex = 6;
             // 
@@ -119,24 +113,32 @@
             this.seguitsL.TabIndex = 8;
             this.seguitsL.Text = "Seguits";
             // 
+            // submButton
+            // 
+            this.submButton.Location = new System.Drawing.Point(124, 64);
+            this.submButton.Name = "submButton";
+            this.submButton.Size = new System.Drawing.Size(84, 23);
+            this.submButton.TabIndex = 9;
+            this.submButton.Text = "Submit";
+            this.submButton.UseVisualStyleBackColor = true;
+            // 
             // UserWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.submButton);
             this.Controls.Add(this.seguitsL);
             this.Controls.Add(this.seguidorsL);
             this.Controls.Add(this.seguitsDGV);
             this.Controls.Add(this.seguidorsDGV);
-            this.Controls.Add(this.fotoPB);
             this.Controls.Add(this.repositorisL);
             this.Controls.Add(this.reposDGV);
             this.Controls.Add(this.userL);
             this.Controls.Add(this.userTB);
             this.Name = "UserWindow";
-            this.Text = "Form1";
+            this.Text = "GithubApiConsumer";
             ((System.ComponentModel.ISupportInitialize)(this.reposDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguidorsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguitsDGV)).EndInit();
             this.ResumeLayout(false);
@@ -149,11 +151,11 @@
         public System.Windows.Forms.Label userL;
         public System.Windows.Forms.DataGridView reposDGV;
         public System.Windows.Forms.Label repositorisL;
-        public System.Windows.Forms.PictureBox fotoPB;
         public System.Windows.Forms.DataGridView seguidorsDGV;
         public System.Windows.Forms.DataGridView seguitsDGV;
         public System.Windows.Forms.Label seguidorsL;
         public System.Windows.Forms.Label seguitsL;
+        public System.Windows.Forms.Button submButton;
     }
 }
 

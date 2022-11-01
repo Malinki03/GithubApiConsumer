@@ -31,10 +31,10 @@ namespace GithuApiConsumer.Controller
 
         public void InitListeners()
         {
-            uwindow.userTB.TextChanged += UserTB_TextChanged;
+            this.uwindow.submButton.Click += SubmButton_Click;
         }
 
-        private void UserTB_TextChanged(object sender, EventArgs e)
+        private void SubmButton_Click(object sender, EventArgs e)
         {
             LoadData();
         }
