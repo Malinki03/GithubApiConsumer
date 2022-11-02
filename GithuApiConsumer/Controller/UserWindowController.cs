@@ -35,7 +35,9 @@ namespace GithuApiConsumer.Controller
         {
             uwindow.reposDGV.DataSource = this.repo.GetUserRepos(uwindow.userTB.Text);
             uwindow.seguitsDGV.DataSource = this.repo.GetUserFollowed(uwindow.userTB.Text);
+            uwindow.seguitsDGV.Columns["avatar_url"].Visible = false;
             uwindow.seguidorsDGV.DataSource = this.repo.GetUserFollowers(uwindow.userTB.Text);
+            uwindow.seguidorsDGV.Columns["avatar_url"].Visible = false;
             uwindow.avatarPB.LoadAsync(this.repo.GetUserAvatar(uwindow.userTB.Text));
         }
 
