@@ -26,10 +26,15 @@ namespace GithuApiConsumer.Controller
             return lr;
         }
 
-        public User GerUser(string nickname)
+        public User GetUser(string nickname)
         {
             User lu = (User)MakeRequest(String.Concat(url, "users/", nickname), null, "GET", "application/json", typeof(User));
             return lu;
+        }
+        public string GetUserAvatar(string nickname)
+        {
+            User lu = (User)MakeRequest(String.Concat(url, "users/", nickname), null, "GET", "application/json", typeof(User));
+            return lu.Avatar_url;
         }
 
         public List<User> GetUserFollowed(string nickname)
