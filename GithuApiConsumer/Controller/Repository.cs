@@ -55,6 +55,12 @@ namespace GithuApiConsumer.Controller
             return lu;
         }
 
+        public List<Commit> GetRepoCommits(string nickname, string repoName)
+        {
+            List<Commit> lc = (List<Commit>)MakeRequest(String.Concat(url, "repos/", nickname, "/", repoName, "/commits"), null, "GET", "applications/json", typeof(List<Commit>));
+            return lc;
+        }
+
         #endregion
 
         public static object MakeRequest(String Url, object Body, string HttpMethod, string ContentType, Type ResponseType)
