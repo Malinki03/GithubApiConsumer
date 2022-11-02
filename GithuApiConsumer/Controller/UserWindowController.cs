@@ -27,6 +27,7 @@ namespace GithuApiConsumer.Controller
             uwindow.reposDGV.DataSource = this.repo.GetUserRepos(uwindow.userTB.Text);
             uwindow.seguitsDGV.DataSource = this.repo.GetUserFollowed(uwindow.userTB.Text);
             uwindow.seguidorsDGV.DataSource = this.repo.GetUserFollowers(uwindow.userTB.Text);
+            uwindow.avatarPB.LoadAsync(this.repo.GetUserAvatar(uwindow.userTB.Text));
         }
 
         public void InitListeners()

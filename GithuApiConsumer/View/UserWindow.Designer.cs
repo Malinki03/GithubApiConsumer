@@ -37,9 +37,11 @@
             this.seguidorsL = new System.Windows.Forms.Label();
             this.seguitsL = new System.Windows.Forms.Label();
             this.submButton = new System.Windows.Forms.Button();
+            this.avatarPB = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.reposDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguidorsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguitsDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPB)).BeginInit();
             this.SuspendLayout();
             // 
             // userTB
@@ -122,11 +124,20 @@
             this.submButton.Text = "Submit";
             this.submButton.UseVisualStyleBackColor = true;
             // 
+            // avatarPB
+            // 
+            this.avatarPB.Location = new System.Drawing.Point(58, 127);
+            this.avatarPB.Name = "avatarPB";
+            this.avatarPB.Size = new System.Drawing.Size(218, 198);
+            this.avatarPB.TabIndex = 10;
+            this.avatarPB.TabStop = false;
+            // 
             // UserWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.avatarPB);
             this.Controls.Add(this.submButton);
             this.Controls.Add(this.seguitsL);
             this.Controls.Add(this.seguidorsL);
@@ -141,6 +152,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.reposDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguidorsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguitsDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,6 +168,7 @@
         public System.Windows.Forms.Label seguidorsL;
         public System.Windows.Forms.Label seguitsL;
         public System.Windows.Forms.Button submButton;
+        public System.Windows.Forms.PictureBox avatarPB;
     }
 }
 
