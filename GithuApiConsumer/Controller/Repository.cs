@@ -26,9 +26,9 @@ namespace GithuApiConsumer.Controller
             return lr;
         }
 
-        public List<User> GerUser(string nickname)
+        public User GerUser(string nickname)
         {
-            List<User> lu = (List<User>)MakeRequest(String.Concat(url, "users/", nickname), null, "GET", "application/json", typeof(List<User>));
+            User lu = (User)MakeRequest(String.Concat(url, "users/", nickname), null, "GET", "application/json", typeof(User));
             return lu;
         }
 
@@ -49,6 +49,7 @@ namespace GithuApiConsumer.Controller
             List<Follower> lu = (List<Follower>)MakeRequest(String.Concat(url, "repos/", nickname, "/", repoName, "/subscribers"), null, "GET", "application/json", typeof(List<Follower>));
             return lu;
         }
+
         #endregion
 
         public static object MakeRequest(String Url, object Body, string HttpMethod, string ContentType, Type ResponseType)
