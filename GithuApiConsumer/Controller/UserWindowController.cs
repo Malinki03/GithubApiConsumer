@@ -21,6 +21,15 @@ namespace GithuApiConsumer.Controller
             InitListeners();
             Application.Run(this.uwindow);
         }
+        public UserWindowController(string nickname)
+        {
+            this.uwindow = new UserWindow();
+            this.repo = new Repository();
+            InitListeners();
+            uwindow.Show();
+            this.uwindow.userTB.Text = nickname;
+            LoadData();
+        }
 
         public void LoadData()
         {
@@ -34,6 +43,18 @@ namespace GithuApiConsumer.Controller
         {
             this.uwindow.submButton.Click += SubmButton_Click;
             this.uwindow.reposDGV.CellDoubleClick += ReposDGV_CellDoubleClick;
+            this.uwindow.seguitsDGV.CellDoubleClick += SeguitsDGV_CellDoubleClick;
+            this.uwindow.seguidorsDGV.CellDoubleClick += SeguidorsDGV_CellDoubleClick;
+        }
+
+        private void SeguidorsDGV_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new UserWindowController(this.uwindow.seguidorsDGV.SelectedCells[0].Value.ToString());
+        }
+
+        private void SeguitsDGV_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new UserWindowController(this.uwindow.seguitsDGV.SelectedCells[0].Value.ToString());
         }
 
         private void ReposDGV_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
