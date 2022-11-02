@@ -35,6 +35,8 @@ namespace GithuApiConsumer.Controller
         public void LoadData()
         {
             this.rwindow.followersDGV.DataSource = this.repo.GetRepoFollowers(this.u, this.r.Name);
+            this.rwindow.descriptionText.Text = this.r.Description;
+            this.rwindow.commitsDGV.DataSource = this.repo.GetRepoCommits(this.u, this.r.Name);
         } 
     }
 }

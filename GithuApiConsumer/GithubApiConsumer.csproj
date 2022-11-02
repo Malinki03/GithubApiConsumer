@@ -71,6 +71,7 @@
     <Compile Include="Controller\RepositoriesWindowController.cs" />
     <Compile Include="Controller\Repository.cs" />
     <Compile Include="Controller\UserWindowController.cs" />
+    <Compile Include="Model\Commit.cs" />
     <Compile Include="Model\Follower.cs" />
     <Compile Include="Model\Repo.cs" />
     <Compile Include="Model\User.cs" />
