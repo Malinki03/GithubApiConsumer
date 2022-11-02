@@ -71,8 +71,15 @@
     <Compile Include="Controller\RepositoriesWindowController.cs" />
     <Compile Include="Controller\Repository.cs" />
     <Compile Include="Controller\UserWindowController.cs" />
+    <Compile Include="Model\Follower.cs" />
     <Compile Include="Model\Repo.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="View\RepoWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RepoWindow.Designer.cs">
+      <DependentUpon>RepoWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\RepoWindow.resx">
+      <DependentUpon>RepoWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserWindow.resx">
       <DependentUpon>UserWindow.cs</DependentUpon>
     </EmbeddedResource>

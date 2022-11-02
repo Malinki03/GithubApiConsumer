@@ -43,6 +43,12 @@ namespace GithuApiConsumer.Controller
             List<User> lu = (List<User>)MakeRequest(String.Concat(url, "users/", nickname, "/followers"), null, "GET", "application/json", typeof(List<User>));
             return lu;
         }
+
+        public List<Follower> GetRepoFollowers(string nickname, string repoName)
+        {
+            List<Follower> lu = (List<Follower>)MakeRequest(String.Concat(url, "repos/", nickname, "/", repoName, "/subscribers"), null, "GET", "application/json", typeof(List<Follower>));
+            return lu;
+        }
         #endregion
 
         public static object MakeRequest(String Url, object Body, string HttpMethod, string ContentType, Type ResponseType)

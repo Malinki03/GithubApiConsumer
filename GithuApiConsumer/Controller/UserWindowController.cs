@@ -32,6 +32,12 @@ namespace GithuApiConsumer.Controller
         public void InitListeners()
         {
             this.uwindow.submButton.Click += SubmButton_Click;
+            this.uwindow.reposDGV.CellDoubleClick += ReposDGV_CellDoubleClick;
+        }
+
+        private void ReposDGV_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new RepositoriesWindowController(this.uwindow.reposDGV.SelectedRows[0].DataBoundItem as Repo, this.uwindow.userTB.Text);
         }
 
         private void SubmButton_Click(object sender, EventArgs e)
