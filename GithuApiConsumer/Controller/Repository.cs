@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Net;
 using GithuApiConsumer.Model;
+using System.Windows.Forms;
 
 namespace GithuApiConsumer.Controller
 {
@@ -55,10 +56,11 @@ namespace GithuApiConsumer.Controller
             return lu;
         }
 
-        public List<Commit> GetRepoCommits(string nickname, string repoName)
+        public List<CommitDTO> GetRepoCommits(string nickname, string repoName)
         {
-            List<Commit> lc = (List<Commit>)MakeRequest(String.Concat(url, "repos/", nickname, "/", repoName, "/commits"), null, "GET", "applications/json", typeof(List<Commit>));
-            return lc;
+            List<commit> lc = (List<commit>)MakeRequest(String.Concat(url, "repos/", nickname, "/", repoName, "/commits"), null, "GET", "application/json", typeof(List<commit>));
+            List<CommitDTO> lcd = lc.Select(c => new CommitDTO { Sha = c.Sha, Name = c.Commit.Author.Name, Email = c.Commit.Author.Email }).ToList();
+            return lcd;
         }
 
         #endregion
